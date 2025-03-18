@@ -90,7 +90,10 @@ const SpellInfo = ({ spells }) => {
           <Markdown
             remarkPlugins={[remarkGfm]}
             components={{
-              a: ({ href, ...props }) => <Link to={`/${href}`} {...props} />,
+              a: ({ href, ...props }) => {
+                const cleanedHref = href.replace(/^..\/+/, "");
+                return <Link to={`/${cleanedHref}`} {...props} />;
+              },
             }}
           >
             {spell.description}

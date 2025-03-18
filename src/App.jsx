@@ -4,7 +4,7 @@ import { SpellViewer } from "./components/SpellViewer.jsx";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/arcane-box">
       <Routes>
         <Route path="/" element={<SpellViewer />} />
         <Route path="/:spellName" element={<SpellViewer />} />
