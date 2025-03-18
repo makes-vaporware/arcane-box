@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.horizontal-shaking {
+  animation: horizontal-shaking 0.35s infinite;
+}
+
+@keyframes horizontal-shaking {
+  0%, 100% { transform: translateX(0) }
+  25%, 75% { transform: translateX(5px) }
+  50% { transform: translateX(-5px) }
+ }
